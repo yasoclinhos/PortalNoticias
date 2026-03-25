@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categoria - PortalNotícias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <span id="current-date"></span>
+    <a href="adm.html">Painel Admin</a>
+  </div>
+  <div class="header-main">
+    <a href="inicio.html" class="logo">Portal<span>Notícias</span></a>
+    <form class="search-form" action="busca.html" method="get">
+      <input type="text" name="q" placeholder="Buscar notícias..." />
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="categoria.html?cat=Política">Política</a></li>
+      <li><a href="categoria.html?cat=Economia">Economia</a></li>
+      <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+      <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+      <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+      <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+      <li><a href="categoria.html?cat=Educação">Educação</a></li>
+      <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CONTEÚDO -->
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="inicio.html">Início</a>
+    <span class="sep">›</span>
+    <span id="cat-name-bread">Categoria</span>
+  </div>
+
+  <!-- Header da página -->
+  <div class="page-header">
+    <h1 id="cat-name-title">Categoria</h1>
+  </div>
+
+  <!-- Grid de notícias -->
+  <div class="news-grid-3">
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-1">Categoria</span>
+        <h3>Brasil Anuncia Novo Pacote de Investimentos em Infraestrutura</h3>
+        <p class="excerpt">Governo federal destina R$ 50 bilhões para melhorias em rodovias, ferrovias e portos.</p>
+        <div class="meta">Maria Silva &bull; 25 Mar 2026</div>
+      </div>
+    </a>
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-2">Categoria</span>
+        <h3>Acordo Comercial Entre Brasil e União Europeia Avança</h3>
+        <p class="excerpt">Negociações entram em fase final após décadas de discussões entre os dois blocos.</p>
+        <div class="meta">Ricardo Almeida &bull; 20 Mar 2026</div>
+      </div>
+    </a>
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-3">Categoria</span>
+        <h3>Novas Medidas Buscam Combater a Corrupção no Setor Público</h3>
+        <p class="excerpt">Pacote de reformas visa fortalecer os mecanismos de controle e transparência.</p>
+        <div class="meta">Carlos Lima &bull; 18 Mar 2026</div>
+      </div>
+    </a>
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-4">Categoria</span>
+        <h3>Congresso Aprova Nova Lei de Proteção Ambiental</h3>
+        <p class="excerpt">Legislação amplia multas e penalidades para crimes contra o meio ambiente.</p>
+        <div class="meta">Fernanda Costa &bull; 15 Mar 2026</div>
+      </div>
+    </a>
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-5">Categoria</span>
+        <h3>Governo Lança Programa de Habitação para Famílias de Baixa Renda</h3>
+        <p class="excerpt">Iniciativa prevê construção de 300 mil novas moradias nos próximos dois anos.</p>
+        <div class="meta">Paulo Mendes &bull; 12 Mar 2026</div>
+      </div>
+    </a>
+    <a href="noticia.html" class="news-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=400&auto=format&fit=crop" alt="" />
+      </div>
+      <div class="card-body">
+        <span class="cat" id="badge-6">Categoria</span>
+        <h3>Reforma Tributária Entra em Fase de Implementação</h3>
+        <p class="excerpt">Mudanças prometem simplificar o sistema fiscal e reduzir a carga tributária.</p>
+        <div class="meta">Ana Rodrigues &bull; 10 Mar 2026</div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Portal<span>Notícias</span></h3>
+      <p>Seu portal de notícias confiável. Informação de qualidade, atualizada em tempo real.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="categoria.html?cat=Política">Política</a></li>
+        <li><a href="categoria.html?cat=Economia">Economia</a></li>
+        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+        <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+        <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+        <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+        <li><a href="categoria.html?cat=Educação">Educação</a></li>
+        <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links-single">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="adm.html">Área do Redator</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 PortalNotícias. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+  // Pegar categoria da URL
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat') || 'Categoria';
+  document.title = cat + ' - PortalNotícias';
+  document.getElementById('cat-name-bread').textContent = cat;
+  document.getElementById('cat-name-title').textContent = cat;
+  // Atualizar badges
+  for (let i = 1; i <= 6; i++) {
+    const el = document.getElementById('badge-' + i);
+    if (el) el.textContent = cat;
+  }
+  // Data
+  const days = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+  const months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const d = new Date();
+  document.getElementById('current-date').textContent =
+    `${days[d.getDay()]}, ${d.getDate()} de ${months[d.getMonth()]} de ${d.getFullYear()}`;
+</script>
+</body>
+</html>

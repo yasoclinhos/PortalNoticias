@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasil Anuncia Novo Pacote de Investimentos - PortalNotícias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <span id="current-date"></span>
+    <a href="admin.html">Painel Admin</a>
+  </div>
+  <div class="header-main">
+    <a href="index.html" class="logo">Portal<span>Notícias</span></a>
+    <form class="search-form" action="busca.html" method="get">
+      <input type="text" name="q" placeholder="Buscar notícias..." />
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="categoria.html?cat=Política">Política</a></li>
+      <li><a href="categoria.html?cat=Economia">Economia</a></li>
+      <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+      <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+      <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+      <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+      <li><a href="categoria.html?cat=Educação">Educação</a></li>
+      <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ARTIGO -->
+<div class="article-container">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Início</a>
+    <span class="sep">›</span>
+    <a href="categoria.html?cat=Política">Política</a>
+    <span class="sep">›</span>
+    <span>Brasil Anuncia Novo Pacote de Investimentos</span>
+  </div>
+
+  <!-- Badge -->
+  <a href="categoria.html?cat=Política" class="category-badge">Política</a>
+
+  <!-- Título -->
+  <h1 class="article-title">Brasil Anuncia Novo Pacote de Investimentos em Infraestrutura</h1>
+
+  <!-- Subtítulo -->
+  <p class="article-subtitle">
+    Governo federal destina R$ 50 bilhões para melhorias em rodovias, ferrovias e portos em todo o país
+  </p>
+
+  <!-- Meta -->
+  <div class="article-meta">
+    <span>✍️ Maria Silva</span>
+    <span>📅 25 de março de 2026</span>
+    <span>🏷️ Política</span>
+  </div>
+
+  <!-- Imagem principal -->
+  <div class="article-hero-img">
+    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&auto=format&fit=crop" alt="Infraestrutura" />
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="article-body">
+    <p>
+      O governo federal anunciou nesta segunda-feira um novo pacote de investimentos no valor de R$ 50 bilhões,
+      destinado à modernização da infraestrutura de transporte do país.
+    </p>
+    <p>
+      O plano inclui a construção de novas rodovias, expansão da malha ferroviária e ampliação de portos nas
+      regiões Norte e Nordeste. Segundo o ministro da Infraestrutura, as obras devem gerar mais de 200 mil
+      empregos diretos nos próximos três anos.
+    </p>
+    <h2>Detalhes do Pacote</h2>
+    <p>
+      Entre os projetos prioritários estão a duplicação de 1.200 km de rodovias federais, a construção de
+      três novos terminais portuários e a extensão de 800 km da malha ferroviária no interior do país.
+    </p>
+    <blockquote>
+      "Estamos comprometidos com o desenvolvimento sustentável e a geração de emprego para a população
+      brasileira." — Ministro da Infraestrutura
+    </blockquote>
+    <p>
+      O investimento será realizado em parceria com a iniciativa privada, através de concessões e parcerias
+      público-privadas. O governo espera atrair pelo menos R$ 30 bilhões do setor privado nos próximos 24 meses.
+    </p>
+    <h2>Impacto Econômico</h2>
+    <p>
+      Especialistas apontam que o pacote pode aumentar o PIB em até 0,8% ao ano durante o período de execução
+      das obras, além de reduzir em até 15% o custo logístico das empresas brasileiras.
+    </p>
+  </div>
+
+  <!-- Comentários -->
+  <div class="comments-section">
+    <h3>💬 Comentários (2)</h3>
+
+    <form class="comment-form">
+      <input type="text" placeholder="Seu nome" required />
+      <textarea placeholder="Escreva seu comentário..."></textarea>
+      <button type="submit" class="btn-submit">Enviar Comentário</button>
+    </form>
+
+    <div class="comment-list">
+      <div class="comment-item">
+        <div class="comment-author">João Ferreira</div>
+        <div class="comment-date">24 mar 2026</div>
+        <p class="comment-text">Ótima notícia! Esperamos que esses investimentos tragam melhorias reais para a população.</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-author">Ana Costa</div>
+        <div class="comment-date">24 mar 2026</div>
+        <p class="comment-text">Precisamos acompanhar de perto a execução para garantir que o dinheiro seja bem utilizado.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Portal<span>Notícias</span></h3>
+      <p>Seu portal de notícias confiável. Informação de qualidade, atualizada em tempo real.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="categoria.html?cat=Política">Política</a></li>
+        <li><a href="categoria.html?cat=Economia">Economia</a></li>
+        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+        <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+        <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+        <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+        <li><a href="categoria.html?cat=Educação">Educação</a></li>
+        <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links-single">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="admin.html">Área do Redator</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 PortalNotícias. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+  const days = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+  const months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const d = new Date();
+  document.getElementById('current-date').textContent =
+    `${days[d.getDay()]}, ${d.getDate()} de ${months[d.getMonth()]} de ${d.getFullYear()}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - PortalNotícias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-page {
+      min-height: 100vh;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .login-logo {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .login-logo span { color: var(--accent); }
+
+    .login-subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .login-box h2 {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .login-form .form-group {
+      margin-bottom: 18px;
+    }
+
+    .login-form label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+      box-sizing: border-box;
+    }
+
+    .login-form input:focus { border-color: var(--accent); }
+
+    .btn-login {
+      width: 100%;
+      padding: 12px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-body);
+      margin-top: 8px;
+      transition: background .2s;
+    }
+
+    .btn-login:hover { background: var(--accent); }
+
+    .error-msg {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+      color: #b91c1c;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    .back-to-portal {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: color .2s;
+    }
+
+    .back-to-portal:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-box">
+    <div class="login-logo">Portal<span>Notícias</span></div>
+    <p class="login-subtitle">Área restrita para redatores e administradores</p>
+
+    <div class="error-msg" id="error-msg">
+      Usuário ou senha incorretos. Tente novamente.
+    </div>
+
+    <form class="login-form" action="adm.html">
+      <div class="form-group">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" placeholder="Digite seu usuário" required autofocus />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+      </div>
+      <button type="submit" class="btn-login">Entrar no Painel</button>
+    </form>
+
+    <a href="inicio.html" class="back-to-portal">← Voltar ao portal</a>
+  </div>
+</div>
+
+</body>
+</html>

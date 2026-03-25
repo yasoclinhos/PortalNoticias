@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Administrativo - PortalNotícias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="admin-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+    <div class="brand">
+      <h2>Portal<span>Notícias</span></h2>
+      <p>Painel Administrativo</p>
+    </div>
+    <nav class="admin-nav">
+      <a href="#dashboard" class="active" onclick="showSection('dashboard', this)"> Dashboard</a>
+      <a href="#noticias" onclick="showSection('noticias', this)"> Notícias</a>
+      <a href="#nova" onclick="showSection('nova', this)">✏️ Nova Notícia</a>
+      <a href="#comentarios" onclick="showSection('comentarios', this)"> Comentários</a>
+    </nav>
+    <div class="back-link">
+      <a href="inicio.html">← Voltar ao Portal</a>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <div class="admin-content">
+
+    <!-- DASHBOARD -->
+    <section id="section-dashboard">
+      <div class="admin-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-top: 4px;">Gerencie as notícias do portal</p>
+        </div>
+        <a href="#nova" onclick="showSection('nova', null)" class="btn-primary">+ Nova Notícia</a>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="num">8</div>
+          <div class="label">Total de Notícias</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">8</div>
+          <div class="label">Publicadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">0</div>
+          <div class="label">Rascunhos</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">2</div>
+          <div class="label">Comentários</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3,1fr); gap: 16px;">
+        <div onclick="showSection('noticias', null)" style="cursor:pointer; background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:20px; transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px; margin-bottom:8px;">📰</div>
+          <h3 style="font-weight:600; margin-bottom:4px;">Gerenciar Notícias</h3>
+          <p style="font-size:13px; color:#6b7280;">Criar, editar e excluir notícias</p>
+        </div>
+        <div onclick="showSection('comentarios', null)" style="cursor:pointer; background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:20px; transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px; margin-bottom:8px;">💬</div>
+          <h3 style="font-weight:600; margin-bottom:4px;">Moderar Comentários</h3>
+          <p style="font-size:13px; color:#6b7280;">Aprovar ou remover comentários</p>
+        </div>
+        <a href="inicio.html" style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:20px; display:block; transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px; margin-bottom:8px;">👁️</div>
+          <h3 style="font-weight:600; margin-bottom:4px; color: inherit;">Ver Portal</h3>
+          <p style="font-size:13px; color:#6b7280;">Visualizar o portal de notícias</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- LISTA DE NOTÍCIAS -->
+    <section id="section-noticias" style="display:none;">
+      <div class="admin-header">
+        <h1>Notícias</h1>
+        <a href="#nova" onclick="showSection('nova', null)" class="btn-primary">+ Nova Notícia</a>
+      </div>
+      <div class="table-wrapper">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Categoria</th>
+              <th>Status</th>
+              <th>Data</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brasil Anuncia Novo Pacote de Investimentos em Infraestrutura</td>
+              <td>Política</td>
+              <td><span class="badge published">Publicado</span></td>
+              <td>25/03/2026</td>
+              <td><div class="table-actions">
+                <button class="btn-icon" onclick="showSection('nova', null)">✏️ Editar</button>
+                <button class="btn-icon danger">🗑️ Excluir</button>
+              </div></td>
+            </tr>
+            <tr>
+              <td>Inteligência Artificial Revoluciona Diagnósticos Médicos</td>
+              <td>Tecnologia</td>
+              <td><span class="badge published">Publicado</span></td>
+              <td>24/03/2026</td>
+              <td><div class="table-actions">
+                <button class="btn-icon" onclick="showSection('nova', null)">✏️ Editar</button>
+                <button class="btn-icon danger">🗑️ Excluir</button>
+              </div></td>
+            </tr>
+            <tr>
+              <td>Seleção Brasileira Convoca Novos Talentos para as Eliminatórias</td>
+              <td>Esportes</td>
+              <td><span class="badge published">Publicado</span></td>
+              <td>24/03/2026</td>
+              <td><div class="table-actions">
+                <button class="btn-icon" onclick="showSection('nova', null)">✏️ Editar</button>
+                <button class="btn-icon danger">🗑️ Excluir</button>
+              </div></td>
+            </tr>
+            <tr>
+              <td>Economia Brasileira Cresce 3,2% no Primeiro Trimestre</td>
+              <td>Economia</td>
+              <td><span class="badge published">Publicado</span></td>
+              <td>23/03/2026</td>
+              <td><div class="table-actions">
+                <button class="btn-icon" onclick="showSection('nova', null)">✏️ Editar</button>
+                <button class="btn-icon danger">🗑️ Excluir</button>
+              </div></td>
+            </tr>
+            <tr>
+              <td>Festival de Cinema Brasileiro Bate Recorde de Público</td>
+              <td>Entretenimento</td>
+              <td><span class="badge draft">Rascunho</span></td>
+              <td>23/03/2026</td>
+              <td><div class="table-actions">
+                <button class="btn-icon" onclick="showSection('nova', null)">✏️ Editar</button>
+                <button class="btn-icon danger">🗑️ Excluir</button>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO NOVA NOTÍCIA -->
+    <section id="section-nova" style="display:none;">
+      <div class="admin-header">
+        <h1>Nova Notícia</h1>
+      </div>
+      <div class="form-section">
+        <form>
+          <div class="form-group">
+            <label>Título *</label>
+            <input type="text" placeholder="Título da notícia" required />
+          </div>
+          <div class="form-group">
+            <label>Subtítulo</label>
+            <input type="text" placeholder="Subtítulo ou resumo da notícia" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Categoria *</label>
+              <select required>
+                <option value="">Selecione...</option>
+                <option>Política</option>
+                <option>Economia</option>
+                <option>Tecnologia</option>
+                <option>Esportes</option>
+                <option>Entretenimento</option>
+                <option>Saúde</option>
+                <option>Educação</option>
+                <option>Mundo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Autor</label>
+              <input type="text" placeholder="Nome do autor" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>URL da Imagem de Capa</label>
+            <input type="url" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label>Conteúdo *</label>
+            <textarea placeholder="Escreva o conteúdo completo da notícia aqui..." required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Status</label>
+              <select>
+                <option value="rascunho">Rascunho</option>
+                <option value="publicado">Publicado</option>
+              </select>
+            </div>
+            <div class="form-group" style="display:flex; align-items:center; gap:8px; padding-top:28px;">
+              <input type="checkbox" id="featured" style="width:auto;" />
+              <label for="featured" style="margin:0; font-weight:400; cursor:pointer;">Destaque na Home</label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">💾 Salvar Notícia</button>
+            <button type="button" class="btn-secondary" onclick="showSection('noticias', null)">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- COMENTÁRIOS -->
+    <section id="section-comentarios" style="display:none;">
+      <div class="admin-header">
+        <h1>💬 Moderação de Comentários</h1>
+      </div>
+
+      <h3 style="font-size:13px; font-weight:700; text-transform:uppercase; color:#d97706; letter-spacing:0.5px; margin-bottom:12px;">Pendentes (1)</h3>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:28px;">
+        <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:16px; display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <p style="font-weight:600; font-size:14px;">Marcos Paulo</p>
+            <p style="font-size:14px; margin:6px 0; color:#374151;">Precisamos de mais investimentos em educação também!</p>
+            <p style="font-size:12px; color:#9ca3af;">25/03/2026</p>
+          </div>
+          <div class="table-actions">
+            <button class="btn-icon">✅ Aprovar</button>
+            <button class="btn-icon danger">🗑️ Excluir</button>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px; font-weight:700; text-transform:uppercase; color:#059669; letter-spacing:0.5px; margin-bottom:12px;">Aprovados (2)</h3>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px; display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <p style="font-weight:600; font-size:14px;">João Ferreira</p>
+            <p style="font-size:14px; margin:6px 0; color:#374151;">Ótima notícia! Esperamos que esses investimentos tragam melhorias reais para a população.</p>
+            <p style="font-size:12px; color:#9ca3af;">24/03/2026</p>
+          </div>
+          <button class="btn-icon danger">🗑️ Excluir</button>
+        </div>
+        <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px; display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <p style="font-weight:600; font-size:14px;">Ana Costa</p>
+            <p style="font-size:14px; margin:6px 0; color:#374151;">Precisamos acompanhar de perto a execução para garantir que o dinheiro seja bem utilizado.</p>
+            <p style="font-size:12px; color:#9ca3af;">24/03/2026</p>
+          </div>
+          <button class="btn-icon danger">🗑️ Excluir</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  function showSection(name, link) {
+    // esconder todas as seções
+    ['dashboard','noticias','nova','comentarios'].forEach(s => {
+      document.getElementById('section-' + s).style.display = 'none';
+    });
+    document.getElementById('section-' + name).style.display = 'block';
+    // atualizar nav active
+    document.querySelectorAll('.admin-nav a').forEach(a => a.classList.remove('active'));
+    if (link) link.classList.add('active');
+  }
+</script>
+</body>
+</html>

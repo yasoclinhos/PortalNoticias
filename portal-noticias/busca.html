@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca - PortalNotícias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <span id="current-date"></span>
+    <a href="adm.html">Painel Admin</a>
+  </div>
+  <div class="header-main">
+    <a href="inicio.html" class="logo">Portal<span>Notícias</span></a>
+    <form class="search-form" action="busca.html" method="get">
+      <input type="text" name="q" id="search-input" placeholder="Buscar notícias..." />
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="categoria.html?cat=Política">Política</a></li>
+      <li><a href="categoria.html?cat=Economia">Economia</a></li>
+      <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+      <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+      <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+      <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+      <li><a href="categoria.html?cat=Educação">Educação</a></li>
+      <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="inicio.html">Início</a>
+    <span class="sep">›</span>
+    <span>Busca</span>
+  </div>
+
+  <div class="search-header">
+    <h1>Resultados para "<span id="query-display"></span>"</h1>
+    <p id="results-count"></p>
+  </div>
+
+  <div id="results-container" class="news-grid-3"></div>
+
+  <div id="no-results" class="no-results" style="display:none;">
+    <h2>Nenhum resultado encontrado</h2>
+    <p>Tente buscar com outros termos ou palavras-chave.</p>
+    <a href="inicio.html" style="color: #e63946; font-weight: 600; margin-top: 16px; display: inline-block;">← Voltar para a Home</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Portal<span>Notícias</span></h3>
+      <p>Seu portal de notícias confiável. Informação de qualidade, atualizada em tempo real.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="categoria.html?cat=Política">Política</a></li>
+        <li><a href="categoria.html?cat=Economia">Economia</a></li>
+        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
+        <li><a href="categoria.html?cat=Esportes">Esportes</a></li>
+        <li><a href="categoria.html?cat=Entretenimento">Entretenimento</a></li>
+        <li><a href="categoria.html?cat=Saúde">Saúde</a></li>
+        <li><a href="categoria.html?cat=Educação">Educação</a></li>
+        <li><a href="categoria.html?cat=Mundo">Mundo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col links-single">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="adm.html">Área do Redator</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 PortalNotícias. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+  // Exemplo de dados estáticos — substitua por dados reais do seu banco
+  const newsData = [
+    { title: "Brasil Anuncia Novo Pacote de Investimentos em Infraestrutura", category: "Política", author: "Maria Silva", date: "25 Mar 2026", img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&auto=format&fit=crop", excerpt: "Governo federal destina R$ 50 bilhões para melhorias em rodovias, ferrovias e portos." },
+    { title: "Inteligência Artificial Revoluciona Diagnósticos Médicos", category: "Tecnologia", author: "João Pereira", date: "24 Mar 2026", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&auto=format&fit=crop", excerpt: "Hospitais brasileiros adotam IA para detectar doenças com 95% de precisão." },
+    { title: "Seleção Brasileira Convoca Novos Talentos para as Eliminatórias", category: "Esportes", author: "Carlos Santos", date: "24 Mar 2026", img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&auto=format&fit=crop", excerpt: "Técnico aposta em jovens jogadores para as próximas partidas decisivas." },
+    { title: "Economia Brasileira Cresce 3,2% no Primeiro Trimestre", category: "Economia", author: "Ana Rodrigues", date: "23 Mar 2026", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&auto=format&fit=crop", excerpt: "Resultado supera expectativas do mercado e fortalece confiança dos investidores." },
+    { title: "Festival de Cinema Brasileiro Bate Recorde de Público", category: "Entretenimento", author: "Fernanda Lima", date: "23 Mar 2026", img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&auto=format&fit=crop", excerpt: "Evento cultural reúne mais de 500 mil espectadores em São Paulo." },
+    { title: "Nova Vacina Contra Dengue Será Distribuída Gratuitamente", category: "Saúde", author: "Dr. Roberto Mendes", date: "22 Mar 2026", img: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&auto=format&fit=crop", excerpt: "Ministério da Saúde inicia campanha nacional de vacinação em abril." },
+    { title: "Programa de Alfabetização Digital Atinge 5 Milhões de Estudantes", category: "Educação", author: "Patrícia Oliveira", date: "21 Mar 2026", img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&auto=format&fit=crop", excerpt: "Iniciativa do governo leva tecnologia e conectividade para escolas públicas." },
+    { title: "Acordo Comercial Entre Brasil e União Europeia Avança", category: "Mundo", author: "Ricardo Almeida", date: "20 Mar 2026", img: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&auto=format&fit=crop", excerpt: "Negociações entram em fase final após décadas de discussões." },
+  ];
+
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q') || '';
+  document.getElementById('query-display').textContent = q;
+  document.getElementById('search-input').value = q;
+
+  const ql = q.toLowerCase();
+  const results = newsData.filter(n =>
+    n.title.toLowerCase().includes(ql) ||
+    n.category.toLowerCase().includes(ql) ||
+    n.excerpt.toLowerCase().includes(ql)
+  );
+
+  const container = document.getElementById('results-container');
+  const noResults = document.getElementById('no-results');
+  const countEl = document.getElementById('results-count');
+
+  if (results.length === 0) {
+    noResults.style.display = 'block';
+    countEl.textContent = '';
+  } else {
+    countEl.textContent = results.length + (results.length === 1 ? ' resultado encontrado' : ' resultados encontrados');
+    results.forEach(n => {
+      container.innerHTML += `
+        <a href="noticia.html" class="news-card">
+          <div class="card-img"><img src="${n.img}" alt="" /></div>
+          <div class="card-body">
+            <span class="cat">${n.category}</span>
+            <h3>${n.title}</h3>
+            <p class="excerpt">${n.excerpt}</p>
+            <div class="meta">${n.author} &bull; ${n.date}</div>
+          </div>
+        </a>`;
+    });
+  }
+
+  // Data
+  const days = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+  const months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const d = new Date();
+  document.getElementById('current-date').textContent =
+    `${days[d.getDay()]}, ${d.getDate()} de ${months[d.getMonth()]} de ${d.getFullYear()}`;
+</script>
+</body>
+</html>
